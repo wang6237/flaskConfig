@@ -21,6 +21,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import requests
 import json
 import hashlib
+import configparser
 
 app = Flask(__name__)
 
@@ -48,6 +49,14 @@ def Generate_pwd(password):
 
 def Check_pwd(pwd_hash, password):
     return check_password_hash(pwd_hash, password)
+
+
+config = configparser.ConfigParser()
+try:
+    config.read('./config/config.ini')
+    # print(config.sections())
+except Exception as e:
+    print(e)
 
 
 def hashTool(arg1, arg2):
@@ -101,12 +110,11 @@ class GetEtcdApi(object):
     """
 
     def __init__(self, key):
-        # self.c = etcd.Client(host='127.0.0.1', port=4001)
-        self.url = 'http://127.0.0.1:4001/v2/keys' + key
+        # config.get("etcd","etcdBaseUrl")
+        self.url = config.get("etcd", "etcdBaseUrl") + key
         super(GetEtcdApi, self).__init__()
 
     def GetKey(self):
-        # print(self.url)
         try:
             r = requests.get(self.url)
             d = {'status_code': 200, 'data': r.json()}
@@ -116,36 +124,46 @@ class GetEtcdApi(object):
 
     def DeleteKye(self):
         # self.c.delete(key)
-        r = requests.delete(self.url + '?dir=true&recursive=true')
-        print(r.status_code)
-        return r.json()
+        try:
+            r = requests.delete(self.url + '?dir=true&recursive=true')
+            # print(r.status_code)
+            return r.json()
+        except requests.exceptions.ConnectionError:
+            return {'status_code': -1, 'data': '无法连接到etcd....'}
 
     def UpdateKey(self, value):
         data = {'value': value}
-        r = requests.put(self.url, data=data)
-        print(r.status_code)
-        return r.json()
+        try:
+            r = requests.put(self.url, data=data)
+            # print(r.status_code)
+            return r.json()
+        except requests.exceptions.ConnectionError:
+            return {'status_code': -1, 'data': '无法连接到etcd....'}
 
     def CreateKey(self, value, mkdir):
         if mkdir:
             data = {'dir': mkdir}
-            r = requests.put(self.url, data=data)
-            print(r.status_code)
-            return r.json()
+            try:
+                r = requests.put(self.url, data=data)
+                # print(r.status_code)
+                return r.json()
+            except requests.exceptions.ConnectionError:
+                return {'status_code': -1, 'data': '无法连接到etcd....'}
         else:
             data = {'value': value}
-            r = requests.put(self.url, data=data)
-            print(r.status_code)
-            return r.json()
+            try:
+                r = requests.put(self.url, data=data)
+                print(r.status_code)
+                return r.json()
+            except requests.exceptions.ConnectionError:
+                return {'status_code': -1, 'data': '无法连接到etcd....'}
 
     def GetAllKey(self):
-        r = requests.get(self.url + '/')
-        return r.json()
-        # child = self.c.read('/')._children
-        # return child
-
-    def GetMember(self):
-        r = requests.get(self.url)
+        try:
+            r = requests.get(self.url + '/')
+            return r.json()
+        except requests.exceptions.ConnectionError:
+            return {'status_code': -1, 'data': '无法连接到etcd....'}
 
 
 @app.route('/', methods=['GET'])
@@ -153,12 +171,8 @@ def index():
     return render_template('index.html')
 
 
-# @app.route('/login')
-# def login():
-#     return render_template('index.html')
-
-
 @app.route('/v1/template', methods=['GET'])
+@jwt_required
 def getTemplate():
     """获取模板列表"""
     templ_lists = ServiceTemplate.query.all()
@@ -174,6 +188,7 @@ def getTemplate():
 
 
 @app.route('/v1/template/', methods=['POST'])
+@jwt_required
 def createTemplate():
     name = request.get_json()['name']
     content = request.get_json()['content']
@@ -193,6 +208,7 @@ def createTemplate():
 
 
 @app.route('/v1/template/<int:id>', methods=['PUT'])
+@jwt_required
 def editTemplate(id):
     name = request.get_json()['name']
     content = request.get_json()['content']
@@ -206,6 +222,7 @@ def editTemplate(id):
 
 
 @app.route('/v1/template/<int:id>', methods=['DELETE'])
+@jwt_required
 def deleteTemplate(id):
     name = request.args.get('name')
     templ = ServiceTemplate.query.filter_by(name=name).first()
@@ -217,19 +234,20 @@ def deleteTemplate(id):
         return jsonify({'type': 'success', 'msg': '删除成功！'})
 
 
-@app.route('/v1/user', methods=['GET'])
-def getUser():
-    """获取模板列表"""
-    userinfo = {
-        'roles': ['admin'],
-        'introduction': 'I am a super administrator',
-        'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-        'name': 'Super Admin'
-    }
-    return jsonify({userinfo}), 200
+# @app.route('/v1/user', methods=['GET'])
+# def getUser():
+#     """获取模板列表"""
+#     userinfo = {
+#         'roles': ['admin'],
+#         'introduction': 'I am a super administrator',
+#         'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+#         'name': 'Super Admin'
+#     }
+#     return jsonify({userinfo}), 200
 
 
 @app.route('/v1/user/', methods=['POST'])
+@jwt_required
 def createUser():
     username = request.get_json()['username']
     password = request.get_json()['password']
@@ -240,11 +258,8 @@ def createUser():
     return jsonify({'type': 'success', 'msg': '添加成功！'})
 
 
-# @api.route('/info')
-# class UserInfo(Resource):
-#   # @jwt_required
-#   @api.doc('user info')
 @app.route('/v1/user/info', methods=['GET'])
+@jwt_required
 def getUserInfo():
     userinfo = {
       'roles': ['admin'],
@@ -256,6 +271,7 @@ def getUserInfo():
 
 
 @app.route('/v1/user/<int:id>', methods=['PUT'])
+@jwt_required
 def editUser(id):
     username = request.get_json()['username']
     password = request.get_json()['password']
@@ -267,17 +283,15 @@ def editUser(id):
         user = User.query.filter_by(username=username).update({'role': role, 'password': password, 'email': email})
     else:
         user = User.query.filter_by(username=username).update({'role': role, 'email': email})
-    # user = User.query.filter_by(username=username).update({'role':role})
-    # print(username,password,role,email)
+
     db.session.commit()
     return jsonify({'type': 'success', 'msg': '编辑成功！'})
 
 
 @app.route('/v1/user/<int:id>', methods=['DELETE'])
+@jwt_required
 def deleteUser(id):
     username = request.args.get('username')
-    # request.args.get(
-
     user = User.query.filter_by(username=username).first()
     db.session.delete(user)
     db.session.commit()
@@ -285,9 +299,9 @@ def deleteUser(id):
 
 
 @app.route('/v1/user/listinfo', methods=['GET'])
+@jwt_required
 def getUserList():
     users = User.query.all()
-    # print(type(users[0]))
     userList = []
     for user in users:
         username = user.username
@@ -327,6 +341,7 @@ def doLogout():
 
 
 @app.route('/v1/env', methods=['GET'])
+@jwt_required
 def getEnv():
     env_lists = Environment.query.all()
     print(env_lists)
@@ -341,6 +356,7 @@ def getEnv():
 
 
 @app.route('/v1/env/', methods=['POST'])
+@jwt_required
 def createEnv():
     name = request.get_json()['name']
     comment = request.get_json()['comment']
@@ -381,6 +397,7 @@ def createEnv():
 
 
 @app.route('/v1/env/<int:id>', methods=['PUT'])
+@jwt_required
 def editEnv(id):
     name = request.get_json()['name']
     content = request.get_json()['content']
@@ -407,6 +424,7 @@ def editEnv(id):
 
 
 @app.route('/v1/env/<int:id>', methods=['DELETE'])
+@jwt_required
 def deleteEnv(id):
     # id = request.args.get('id')
     # print(id)
@@ -422,6 +440,7 @@ def deleteEnv(id):
 
 
 @app.route('/v1/env/sync/', methods=['POST'])
+@jwt_required
 def doSync():
     name = request.get_json()['name']
     content = request.get_json()['content']
@@ -432,6 +451,7 @@ def doSync():
 
 
 @app.route('/v1/env/sync/<int:id>', methods=['DELETE'])
+@jwt_required
 def doSyncDelete(id):
     path = request.args.get('path')
     envId = request.args.get('envId')
@@ -452,6 +472,7 @@ def doSyncDelete(id):
 
 
 @app.route('/v1/env/sync/state/', methods=['PUT'])
+@jwt_required
 def editState():
     path = request.get_json()['path']
     content = request.get_json()['content']
@@ -469,9 +490,6 @@ def editState():
             return jsonify({'state': 1, 'items': c['data']['node']['value']})
     else:
         return jsonify({'state': 1, 'items': []})
-
-
-
 
 
 if __name__ == '__main__':
