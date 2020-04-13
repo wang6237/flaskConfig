@@ -17,9 +17,9 @@ export function addTemplate(data) {
   })
 }
 
-export function editTemplate(data) {
+export function editTemplate(id, data) {
   return request({
-    url: '/v1/template/',
+    url: '/v1/template/' + id,
     method: 'put',
     data
   })

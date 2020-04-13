@@ -101,8 +101,7 @@
 </template>
 
 <script>
-// import { fetchList, fetchPv, createArticle, updateArticle } from '@/api/article'
-// import waves from '@/directive/waves' // waves directive
+
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
 import { getTemplateList, editTemplate, deleteTemplate, addTemplate } from '@/api/getTemplateApi'
 
@@ -164,7 +163,6 @@ export default {
       getTemplateList().then(response => {
         this.list = response.data.items
         this.total = response.data.total
-        // alert("王子卓是个勇敢的小伙子！！")
         setTimeout(() => {
           this.listLoading = false
         }, 1.5 * 1000)
@@ -192,6 +190,7 @@ export default {
       this.temp.path = row.path
       this.temp.comment = row.comment
       this.temp.disabled = true
+      this.temp.id = row.id
       // const action = 'GetList'
       this.addTemplateFormVisible = true
     },
@@ -206,6 +205,7 @@ export default {
         comment: '',
         content: '',
         path: '',
+        id: 0,
         disabled: false
       }
     },
@@ -214,7 +214,7 @@ export default {
       this.$refs['templateDataForm'].validate((valid) => {
         if (valid) {
           if (this.temp.disabled) {
-            editTemplate(this.temp).then(res => {
+            editTemplate(this.temp.id, this.temp).then(res => {
               const msg = res.data.msg
               const type = res.data.type
               this.addTemplateFormVisible = false

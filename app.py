@@ -175,7 +175,7 @@ def index():
 def getTemplate():
     """获取模板列表"""
     templ_lists = ServiceTemplate.query.all()
-    print(templ_lists)
+    # print(templ_lists)
     templ_list = []
     if len(templ_lists) == 0:
         return jsonify({'total': 0, 'items': []})
@@ -197,8 +197,7 @@ def createTemplate():
     templ = ServiceTemplate.query.filter_by(name=name).first()
 
     if templ is None:
-        db.session.add(ServiceTemplate(name=name, content=json.dumps(
-            content), comment=comment, path=path))
+        db.session.add(ServiceTemplate(name=name, content=json.dumps(content), comment=comment, path=path))
         db.session.commit()
         return jsonify({'type': 'success', 'msg': '添加成功'})
     else:
@@ -211,12 +210,13 @@ def editTemplate(id):
     name = request.get_json()['name']
     content = request.get_json()['content']
     comment = request.get_json()['comment']
-    templ = ServiceTemplate.query.filter_by(name=name).first()
+    templ = ServiceTemplate.query.filter_by(id=id).first()
+    print('update ....1')
     if templ is None:
         return jsonify({'type': 'error', 'msg': '更新失败，数据不存在！！'})
     else:
-        ServiceTemplate.query.filter_by(name=name).update(
-            {'content': json.dumps(content), 'comment': comment})
+        ServiceTemplate.query.filter_by(name=name).update({'content': json.dumps(content), 'comment': comment})
+        db.session.commit()
         return jsonify({'type': 'success', 'msg': '更新成功！'})
 
 
