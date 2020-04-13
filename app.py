@@ -123,7 +123,6 @@ class GetEtcdApi(object):
             return {'status_code': -1, 'data': '无法连接到etcd....'}
 
     def DeleteKye(self):
-        # self.c.delete(key)
         try:
             r = requests.delete(self.url + '?dir=true&recursive=true')
             # print(r.status_code)
@@ -182,7 +181,8 @@ def getTemplate():
         return jsonify({'total': 0, 'items': []})
     else:
         for t in templ_lists:
-            i = {'name': t.name, 'content': json.loads(t.content), 'comment': t.comment, 'id': t.id, 'path': t.path}
+            i = {'name': t.name, 'content': json.loads(
+                t.content), 'comment': t.comment, 'id': t.id, 'path': t.path}
             templ_list.append(i)
         return jsonify({'total': len(templ_list), 'items': templ_list})
 
@@ -194,13 +194,11 @@ def createTemplate():
     content = request.get_json()['content']
     comment = request.get_json()['comment']
     path = request.get_json()['path']
-    # if path[0] == '/':
-    #     path =
-    # print(content)
     templ = ServiceTemplate.query.filter_by(name=name).first()
 
     if templ is None:
-        db.session.add(ServiceTemplate(name=name, content=json.dumps(content), comment=comment, path=path))
+        db.session.add(ServiceTemplate(name=name, content=json.dumps(
+            content), comment=comment, path=path))
         db.session.commit()
         return jsonify({'type': 'success', 'msg': '添加成功'})
     else:
@@ -217,15 +215,16 @@ def editTemplate(id):
     if templ is None:
         return jsonify({'type': 'error', 'msg': '更新失败，数据不存在！！'})
     else:
-        ServiceTemplate.query.filter_by(name=name).update({'content': json.dumps(content), 'comment': comment})
+        ServiceTemplate.query.filter_by(name=name).update(
+            {'content': json.dumps(content), 'comment': comment})
         return jsonify({'type': 'success', 'msg': '更新成功！'})
 
 
 @app.route('/v1/template/<int:id>', methods=['DELETE'])
 @jwt_required
 def deleteTemplate(id):
-    name = request.args.get('name')
-    templ = ServiceTemplate.query.filter_by(name=name).first()
+    # name = request.args.get('name')
+    templ = ServiceTemplate.query.filter_by(id=id).first()
     if templ is None:
         return jsonify({'type': 'error', 'msg': '删除失败，数据不存在！！'})
     else:
@@ -253,7 +252,8 @@ def createUser():
     password = request.get_json()['password']
     role = request.get_json()['roles']
     email = request.get_json()['email']
-    db.session.add(User(username=username, password=Generate_pwd(password), email=email, role=role))
+    db.session.add(User(username=username, password=Generate_pwd(
+        password), email=email, role=role))
     db.session.commit()
     return jsonify({'type': 'success', 'msg': '添加成功！'})
 
@@ -262,10 +262,10 @@ def createUser():
 @jwt_required
 def getUserInfo():
     userinfo = {
-      'roles': ['admin'],
-      'introduction': 'I am a super administrator',
-      'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-      'name': 'Super Admin'
+        'roles': ['admin'],
+        'introduction': 'I am a super administrator',
+        'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+        'name': 'Super Admin'
     }
     return jsonify(userinfo), 200
 
@@ -280,9 +280,11 @@ def editUser(id):
 
     # pbkdf2:sha256 不在password中说明修改了密码，这里处理的不够严谨
     if 'pbkdf2:sha256' not in password:
-        user = User.query.filter_by(username=username).update({'role': role, 'password': password, 'email': email})
+        user = User.query.filter_by(username=username).update(
+            {'role': role, 'password': password, 'email': email})
     else:
-        user = User.query.filter_by(username=username).update({'role': role, 'email': email})
+        user = User.query.filter_by(username=username).update(
+            {'role': role, 'email': email})
 
     db.session.commit()
     return jsonify({'type': 'success', 'msg': '编辑成功！'})
@@ -309,7 +311,8 @@ def getUserList():
         roles = user.role
         id = user.id
         email = user.email
-        userList.append({'username': username, 'password': password, 'roles': roles, 'id': id, 'email': email})
+        userList.append({'username': username, 'password': password,
+                         'roles': roles, 'id': id, 'email': email})
     return jsonify({'total': len(users), 'items': userList})
 
 
@@ -350,7 +353,8 @@ def getEnv():
         return jsonify({'total': 0, 'items': []})
     else:
         for e in env_lists:
-            i = {'name': e.name, 'path': e.path, 'id': e.id, 'content': json.loads(e.content), 'comment': e.comment}
+            i = {'name': e.name, 'path': e.path, 'id': e.id,
+                 'content': json.loads(e.content), 'comment': e.comment}
             env_list.append(i)
     return jsonify({'total': len(env_list), 'items': env_list})
 
@@ -387,9 +391,10 @@ def createEnv():
                     'content': json.loads(templ.content)
                 }
                 c.append(t)
-            print('template>>>>>',c)
+            print('template>>>>>', c)
         print(c)
-        db.session.add(Environment(name=name, content=json.dumps(c), comment=comment, path=path))
+        db.session.add(Environment(
+            name=name, content=json.dumps(c), comment=comment, path=path))
         db.session.commit()
         return jsonify({'total': 4, 'msg': '添加成功'})
     else:
@@ -419,7 +424,8 @@ def editEnv(id):
                     'content': json.loads(templ.content)
                 }
                 c.append(t)
-        Environment.query.filter_by(path=path).update({'name': name, 'comment': comment, 'content': json.dumps(c)})
+        Environment.query.filter_by(path=path).update(
+            {'name': name, 'comment': comment, 'content': json.dumps(c)})
         return jsonify({'type': 'success', 'msg': '更新成功'})
 
 
