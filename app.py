@@ -64,7 +64,7 @@ def hashTool(arg1, arg2):
     m2 = hashlib.md5()
     m1.update(arg1.encode('utf-8'))
     m2.update(arg2.encode('utf-8'))
-    print('Hash >>>>>>>>> ', m1.hexdigest(), m2.hexdigest())
+    # print('Hash >>>>>>>>> ', m1.hexdigest(), m2.hexdigest())
     if m1.hexdigest() == m2.hexdigest():
         return True
     else:
@@ -486,7 +486,7 @@ def editState():
     # envInfo = Environment.query.filter_by(id=envId).first()
     etcdServer = GetEtcdApi(path)
     c = etcdServer.GetKey()
-    print(c)
+    # print(c)
     # print()
     if c['status_code'] == 200:
         r = hashTool(content, c['data']['node']['value'])

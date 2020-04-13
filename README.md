@@ -14,3 +14,25 @@ pip install -r requirements.txt
 python init_db.py
 python app.py
 ```
+
+## install dependency
+```
+npm install
+```
+# develop
+```bash
+npm run dev
+```
+
+This will automatically open http://localhost:9528
+
+## Build
+
+```bash
+# build for test environment
+npm run build:stage
+
+# build for production environment
+npm run build:prod
+```
+
