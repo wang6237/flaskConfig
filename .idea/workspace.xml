@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e16e5ee-9e00-4202-9273-462b9e654b38" name="Default Changelist" comment="增加 页面源码">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/flaskConfig.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app.ab549fb2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/chunk-6ce41085.fbcf90a2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/chunk-ca2ab480.d171e173.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/chunk-elementUI.ded27da0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/element-icons.535877f5.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/element-icons.732389de.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/app.eba901e6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/chunk-5b59aa74.d9ef5bbc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/chunk-6ce41085.f4944508.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/chunk-ca2ab480.dd103521.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/chunk-elementUI.1d46c4a4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/chunk-libs.1c0fa8ef.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.361ca177.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/chunk-1237e476.9b011264.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/chunk-125a8fd2.128950df.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/chunk-212a6107.86b2de52.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/chunk-5b59aa74.10514fb6.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/chunk-elementUI.18b11d0e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/chunk-libs.7ec9f42b.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/chunk-libs.3dfb7769.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/element-icons.2fad952a.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/element-icons.6f0a7632.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.095eecaf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-1237e476.f8e8bf9d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-125a8fd2.0b8c5dfd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-212a6107.7555c5e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-2d0b6c6c.5dbe2914.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-2d0b6c6c.83d379ff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-2d0c13f6.57a89a92.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-2d0c13f6.f90de4ab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-4de1c2b6.ee008b68.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-4de1c2b6.ad55d694.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-elementUI.25d09358.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/chunk-libs.795939e1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/app.py" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="wang6237 &lt;ykwang@vip.qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aRQ966jYFIu3nCDD9BAl78Du09" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e16e5ee-9e00-4202-9273-462b9e654b38" name="Default Changelist" comment="" />
+      <created>1586695771240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586695771240</updated>
+      <workItem from="1586695774487" duration="922000" />
+      <workItem from="1586696833145" duration="5988000" />
+      <workItem from="1586759449337" duration="75000" />
+      <workItem from="1586760298390" duration="5157000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1586700345779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586700345779</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新readme">
+      <created>1586700841466</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586700841466</updated>
+    </task>
+    <task id="LOCAL-00003" summary="删除多余代码">
+      <created>1586704106287</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586704106287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="增加读取配置文件；">
+      <created>1586704169745</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586704169745</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修复不能删除模板的bug">
+      <created>1586760389433</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586760389433</updated>
+    </task>
+    <task id="LOCAL-00006" summary="更新gitignore文件">
+      <created>1586761009740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586761009740</updated>
+    </task>
+    <task id="LOCAL-00007" summary="更新readme">
+      <created>1586761049597</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586761049597</updated>
+    </task>
+    <task id="LOCAL-00008" summary="增加 页面源码">
+      <created>1586761187291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586761187291</updated>
+    </task>
+    <task id="LOCAL-00009" summary="修复编辑模板不生效的bug">
+      <created>1586763320805</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586763320805</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="删除多余代码" />
+    <MESSAGE value="增加读取配置文件；" />
+    <MESSAGE value="修复不能删除模板的bug" />
+    <MESSAGE value="更新gitignore文件" />
+    <MESSAGE value="更新readme" />
+    <MESSAGE value="增加 页面源码" />
+    <MESSAGE value="修复编辑模板不生效的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复编辑模板不生效的bug" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="474" y="210" key="#Inspections" timestamp="1586762238416">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="474" y="210" key="#Inspections/0.0.1680.1050@0.0.1680.1050" timestamp="1586762238416" />
+    <state x="529" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586703776408">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="529" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586703776408" />
+    <state x="417" y="14" key="CommitChangelistDialog2" timestamp="1586763320456">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="417" y="14" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586763320456" />
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom" timestamp="1586761152797">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152797" />
+    <state width="1638" height="290" key="GridCell.Tab.0.center" timestamp="1586761152795">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152795" />
+    <state width="1638" height="290" key="GridCell.Tab.0.left" timestamp="1586761152794">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152794" />
+    <state width="1638" height="290" key="GridCell.Tab.0.right" timestamp="1586761152796">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="290" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152796" />
+    <state x="341" y="164" key="SettingsEditor" timestamp="1586762317807">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586762317807" />
+    <state x="440" y="261" key="Vcs.Push.Dialog.v2" timestamp="1586704188625">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="261" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586704188625" />
+  </component>
+</project>
