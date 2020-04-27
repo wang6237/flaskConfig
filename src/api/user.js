@@ -18,7 +18,7 @@ export function getInfo() {
 
 export function getUserListInfo() {
   return request({
-    url: 'v1/user/listinfo',
+    url: 'v1/user/',
     method: 'get'
     // params: { token }
   })
@@ -51,9 +51,10 @@ export function deleteUser(username) {
   })
 }
 
-export function logout() {
+export function logout(data) {
   return request({
     url: 'v1/user/logout',
-    method: 'post'
+    method: 'post',
+    data
   })
 }

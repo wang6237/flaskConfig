@@ -55,7 +55,7 @@
           <el-button
             size="mini"
             type="danger"
-            @click="handleDelete(scope.row.name)"
+            @click="handleDelete(scope.row.id)"
           >
             删除
           </el-button>
@@ -216,6 +216,7 @@ export default {
         sort: '+id'
       },
       env: {
+        id: 0,
         name: '',
         path: '',
         template_name: [],
@@ -277,6 +278,7 @@ export default {
     },
     resetEnv() {
       this.env = {
+        id: 0,
         name: '',
         path: '',
         template_name: [],
@@ -347,8 +349,8 @@ export default {
       }
       this.editEnvFormVisible = true
     },
-    handleDelete(name) {
-      delEnvList(name).then(res => {
+    handleDelete(id) {
+      delEnvList(id).then(res => {
         const msg = res.data.msg
         const type = res.data.type
         // this.list.unshift(this.temp)
@@ -377,7 +379,8 @@ export default {
         if (valid) {
           // this.temp.id = parseInt(Math.random() * 100) + 1024 // mock a id
           // this.temp.author = 'vue-element-admin'
-          editEnvList(this.env).then(res => {
+          let id = this.env.id
+          editEnvList(id,this.env).then(res => {
             // console.log(res.data)
             const msg = res.data.msg
             const type = res.data.type

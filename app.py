@@ -304,16 +304,7 @@ def deleteUser(id):
 @jwt_required
 def getUserList():
     users = User.query.all()
-    userList = []
-    for user in users:
-        username = user.username
-        password = user.password
-        roles = user.role
-        id = user.id
-        email = user.email
-        userList.append({'username': username, 'password': password,
-                         'roles': roles, 'id': id, 'email': email})
-    return jsonify({'total': len(users), 'items': userList})
+    return jsonify({'total': len(users), 'items': users})
 
 
 @app.route('/v1/user/login', methods=['POST'])

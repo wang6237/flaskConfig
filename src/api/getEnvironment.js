@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getEnvLists() {
   return request({
-    url: '/v1/env',
+    url: '/v1/env/',
     method: 'get'
   })
 }
@@ -15,9 +15,9 @@ export function addEnvList(data) {
   })
 }
 
-export function editEnvList(data) {
+export function editEnvList(id, data) {
   return request({
-    url: '/v1/env/',
+    url: '/v1/env/' + id,
     method: 'put',
     data
   })

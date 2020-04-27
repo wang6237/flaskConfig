@@ -33,7 +33,7 @@
         </el-table-column>
         <el-table-column label="Role" align="center">
           <template slot-scope="scope">
-            <span>{{ scope.row.roles }}</span>
+            <span>{{ scope.row.role }}</span>
           </template>
         </el-table-column>
         <el-table-column label="Email" align="center">
@@ -82,13 +82,13 @@
           </el-form-item>
           <!--<el-form-item label="Role" prop="role">-->
           <el-form-item label="Role" >
-            <el-select v-model="temp.roles" class="filter-item" placeholder="Please select">
+            <el-select v-model="temp.role" class="filter-item" placeholder="Please select">
               <el-option v-for="item in roleTypeOptions" :key="item.key" :label="item.display_name" :value="item.key" />
             </el-select>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-        <el-button @click="addUserFormVisible = false">
+        <el-button @click="resetTemp()">
           Cancel
         </el-button>
         <el-button type="primary" @click="dialogStatus==='create'?createDate():updateDate()">
@@ -127,7 +127,7 @@
         temp: {
           username: '',
           password: '',
-          roles: '',
+          role: '',
           email: ''
         },
         textMap: {
@@ -179,6 +179,7 @@
                 duration: 2000
               });
               this.getUserInfo();
+              this.resetTemp()
             })
           }
         })
@@ -205,6 +206,7 @@
               });
               this.getUserInfo();
               this.addUserFormVisible = false;
+              this.resetTemp()
             })
           }
         })
@@ -248,6 +250,16 @@
         })
 
 
+      },
+      resetTemp() {
+        this.addUserFormVisible = false
+        this.isUsernameDisabled = false
+        this.temp = {
+          username: '',
+          password: '',
+          role: '',
+          email: ''
+        }
       }
     }
   }

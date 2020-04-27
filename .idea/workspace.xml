@@ -10,40 +10,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/app.ab549fb2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/chunk-6ce41085.fbcf90a2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/chunk-ca2ab480.d171e173.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/chunk-elementUI.ded27da0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/element-icons.535877f5.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/element-icons.732389de.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/app.eba901e6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/chunk-5b59aa74.d9ef5bbc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/chunk-6ce41085.f4944508.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/chunk-ca2ab480.dd103521.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/chunk-elementUI.1d46c4a4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/chunk-libs.1c0fa8ef.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/app.361ca177.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/chunk-1237e476.9b011264.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/chunk-125a8fd2.128950df.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/chunk-212a6107.86b2de52.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/chunk-5b59aa74.10514fb6.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/chunk-elementUI.18b11d0e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/chunk-libs.7ec9f42b.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/chunk-libs.3dfb7769.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/element-icons.2fad952a.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/element-icons.6f0a7632.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.095eecaf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-1237e476.f8e8bf9d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-125a8fd2.0b8c5dfd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-212a6107.7555c5e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-2d0b6c6c.5dbe2914.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-2d0b6c6c.83d379ff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-2d0c13f6.57a89a92.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-2d0c13f6.f90de4ab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-4de1c2b6.ee008b68.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/chunk-4de1c2b6.ad55d694.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-elementUI.25d09358.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/chunk-libs.795939e1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +76,7 @@
       <workItem from="1586695774487" duration="922000" />
       <workItem from="1586696833145" duration="5988000" />
       <workItem from="1586759449337" duration="75000" />
-      <workItem from="1586760298390" duration="5157000" />
+      <workItem from="1586760298390" duration="6212000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1586700345779</created>
@@ -175,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586763320805</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更新页面代码">
+      <created>1586766477503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1586766477503</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +163,8 @@
     <MESSAGE value="更新readme" />
     <MESSAGE value="增加 页面源码" />
     <MESSAGE value="修复编辑模板不生效的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复编辑模板不生效的bug" />
+    <MESSAGE value="更新页面代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新页面代码" />
   </component>
   <component name="WindowStateProjectService">
     <state x="474" y="210" key="#Inspections" timestamp="1586762238416">
@@ -201,33 +175,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="529" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586703776408" />
-    <state x="417" y="14" key="CommitChangelistDialog2" timestamp="1586763320456">
+    <state x="417" y="14" key="CommitChangelistDialog2" timestamp="1586766476955">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="417" y="14" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586763320456" />
-    <state width="1638" height="290" key="GridCell.Tab.0.bottom" timestamp="1586761152797">
+    <state x="417" y="14" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586766476955" />
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom" timestamp="1586824736086">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152797" />
-    <state width="1638" height="290" key="GridCell.Tab.0.center" timestamp="1586761152795">
+    <state width="1638" height="290" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586824736086" />
+    <state width="1638" height="290" key="GridCell.Tab.0.center" timestamp="1586824736084">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="290" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152795" />
-    <state width="1638" height="290" key="GridCell.Tab.0.left" timestamp="1586761152794">
+    <state width="1638" height="290" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586824736084" />
+    <state width="1638" height="290" key="GridCell.Tab.0.left" timestamp="1586824736084">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="290" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152794" />
-    <state width="1638" height="290" key="GridCell.Tab.0.right" timestamp="1586761152796">
+    <state width="1638" height="290" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586824736084" />
+    <state width="1638" height="290" key="GridCell.Tab.0.right" timestamp="1586824736085">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="290" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586761152796" />
+    <state width="1638" height="290" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586824736085" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1586762317807">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586762317807" />
-    <state x="440" y="261" key="Vcs.Push.Dialog.v2" timestamp="1586704188625">
+    <state x="440" y="261" key="Vcs.Push.Dialog.v2" timestamp="1586766531770">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="261" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586704188625" />
+    <state x="440" y="261" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586766531770" />
   </component>
 </project>
