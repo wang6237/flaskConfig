@@ -9,7 +9,7 @@ Click==7.0
 configparser==5.0.0
 cryptography==2.7
 Flask==1.0.3
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-JWT-Extended==3.18.2
 flask-restplus==0.12.1
 Flask-SQLAlchemy==2.4.0
